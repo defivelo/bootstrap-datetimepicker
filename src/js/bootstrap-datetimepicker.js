@@ -2356,9 +2356,7 @@
         date = getMoment();
         viewDate = date.clone();
 
-        $.extend(true, options, dataToOptions());
-
-        picker.options(options);
+        $.extend(true, options, dataToOptions());        
 
         initFormatting();
 
@@ -2373,6 +2371,9 @@
         else if (options.defaultDate && input.attr('placeholder') === undefined) {
             setValue(options.defaultDate);
         }
+     
+        picker.options(options);
+     
         if (options.inline) {
             show();
         }
